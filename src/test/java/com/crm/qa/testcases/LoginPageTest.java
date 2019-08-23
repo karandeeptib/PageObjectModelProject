@@ -35,7 +35,6 @@ public class LoginPageTest extends TestBase{
 	
 	
 	
-	
 	// 3. Create Test cases 
 	
 	@Test(priority=1)

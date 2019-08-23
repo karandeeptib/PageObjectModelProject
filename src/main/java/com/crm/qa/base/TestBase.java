@@ -3,7 +3,6 @@ package com.crm.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
