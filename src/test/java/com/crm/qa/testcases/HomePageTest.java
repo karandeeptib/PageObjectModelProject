@@ -63,6 +63,9 @@ public class HomePageTest extends TestBase {
 		contactsPage= homePage.clickOnContactsLink();
 	}
 	
+
+	
+	
 	
 	
 	// 4. End your test with the Teardown method and close your browser

@@ -7,7 +7,7 @@ public class TestUtil extends TestBase{
 	public static long PAGE_LOAD_TIMEOUT=30;
 	public static long IMPLICIT_WAIT=20;
 	
-	public static void customWait20s() {
+	public static void customWait10s() {
 		try {
 			Thread.sleep(20000);
 		} catch (InterruptedException e) {

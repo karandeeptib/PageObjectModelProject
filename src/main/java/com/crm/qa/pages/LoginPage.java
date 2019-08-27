@@ -47,7 +47,7 @@ public class LoginPage extends TestBase{
 	public HomePage login(String uname,String pwd) {
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
-		TestUtil.customWait20s(); 
+		TestUtil.customWait10s(); 
 		loginBtn.click();
 		
 		/** Now after clicking login button, we are directed to the homepage (landing page), so this method should return
