@@ -3,6 +3,7 @@ package com.crm.qa.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
@@ -44,10 +45,20 @@ public class ContactsPageTest extends TestBase{
 		Assert.assertTrue(contactsPage.verifyContactsLabel(), "Contact label is not available on the page");		
 	}
 	
-	/*
-	 * @Test public void selectContactsByNameTest() {
-	 * contactsPage.selectContactsByName("Tom Jerry"); }
-	 */
+
+	@DataProvider
+	public Object[][] getCRMTestData() {
+		Object[][] data= TestUtil.getTestData("contact");
+		return data;
+		
+		
+	}
+	
+	@Test(priority = 2, dataProvider = "getCRMTestData")
+	public void createNewContact(String title, String firstName, String lastName, String company) {
+		homePage.clickOnNewContactLink();
+		contactsPage.createNewContact(title, firstName,lastName,company);
+	}
 	
 	
 	@AfterMethod
