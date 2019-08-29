@@ -3,13 +3,16 @@ package com.crm.qa.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
+import com.crm.qa.util.CustomListener;
 
+@Listeners(CustomListener.class)
 public class LoginPageTest extends TestBase{
 	
 	// Defining LoginPage class and HomePage class reference at class-level so that it can be used throughout the program
@@ -46,7 +49,7 @@ public class LoginPageTest extends TestBase{
 	public void LoginPageTitleTest() {
 		log.info("*********running login page title test*********** ");
 		String title=loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.");
+		Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.111");
 	}
 	
 	@Test(priority=2)
