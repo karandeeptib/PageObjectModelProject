@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
@@ -14,6 +15,8 @@ public class LoginPageTest extends TestBase{
 	// Defining LoginPage class and HomePage class reference at class-level so that it can be used throughout the program
 	LoginPage loginPage;
 	HomePage homePage;
+	
+	Logger log=Logger.getLogger(LoginPageTest.class);
 	
 	// 1. create the constructor of LoginPageTest and with the help of super() keyword, call the constructor of parent class 
 	public LoginPageTest() {
@@ -29,6 +32,8 @@ public class LoginPageTest extends TestBase{
 	
 	@BeforeMethod
 	public void setUp() {
+		
+		log.info("*********Inside the setup method ************");
 		initialization();
 		loginPage=new LoginPage();
 	}
@@ -39,6 +44,7 @@ public class LoginPageTest extends TestBase{
 	
 	@Test(priority=1)
 	public void LoginPageTitleTest() {
+		log.info("*********running login page title test*********** ");
 		String title=loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.");
 	}

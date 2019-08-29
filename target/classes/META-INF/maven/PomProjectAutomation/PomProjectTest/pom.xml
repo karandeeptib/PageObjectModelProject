@@ -22,7 +22,7 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- Dependencies for Selenium -->
 
 		<dependency>
@@ -30,19 +30,19 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.5.3</version>
 		</dependency>
-		
+
 		<!-- Dependencies for testNG -->
-		
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.11</version>
 			<scope>compile</scope>
 		</dependency>
-		
-		
+
+
 		<!-- Dependencies for Apache POI API -->
-		
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -105,7 +105,20 @@
 			<artifactId>openxml4j</artifactId>
 			<version>1.0-beta</version>
 		</dependency>
-		
+
+		<!-- dependency for extent report -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+
+		<!-- dependency for log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
 
 
 
