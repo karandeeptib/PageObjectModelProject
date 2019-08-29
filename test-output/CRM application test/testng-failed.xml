@@ -3,24 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [CRM application test]">
   <listeners>
     <listener class-name="com.crm.qa.ExtentReportListener.ExtentReportListener"/>
+    <listener class-name="com.crm.qa.util.RetryTestListener"/>
   </listeners>
   <test name="Free CRM Application testcases(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.HomePageTest">
+      <class name="com.crm.qa.testcases.LoginPageTest">
         <methods>
-          <include name="verifyUserNameTest"/>
-          <include name="verifyContactsLinkTest"/>
+          <include name="CRMLogoImageTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="loginTest"/>
+          <include name="LoginPageTitleTest"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.HomePageTest -->
-      <class name="com.crm.qa.testcases.ContactsPageTest">
-        <methods>
-          <include name="createNewContact" invocation-numbers="0 1 2"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
+      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Free CRM Application testcases(failed) -->
 </suite> <!-- Failed suite [CRM application test] -->

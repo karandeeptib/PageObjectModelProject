@@ -56,6 +56,7 @@ public class LoginPageTest extends TestBase{
 	public void CRMLogoImageTest() {
 		boolean logoFlag= loginPage.validateCRMImage();
 		Assert.assertTrue(logoFlag);
+		Assert.assertEquals(true, false);
 	}
 	
 	@Test(priority=3)
