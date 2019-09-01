@@ -11,7 +11,7 @@ public class LoginPage extends TestBase{
 	 
 	//1. Create the Page Factory - OR 
 	
-	@FindBy(name="username11")
+	@FindBy(name="username")
 	WebElement username;
 	
 	@FindBy(name="password")

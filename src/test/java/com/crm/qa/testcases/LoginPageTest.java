@@ -49,14 +49,13 @@ public class LoginPageTest extends TestBase{
 	public void LoginPageTitleTest() {
 		log.info("*********running login page title test*********** ");
 		String title=loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.111");
+		Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.");
 	}
 	
 	@Test(priority=2)
 	public void CRMLogoImageTest() {
 		boolean logoFlag= loginPage.validateCRMImage();
 		Assert.assertTrue(logoFlag);
-		Assert.assertEquals(true, false);
 	}
 	
 	@Test(priority=3)
